@@ -40,7 +40,7 @@
         <h3>Contact Form</h3>
 
         <div class="contact-box">
-            <form action="./php/send_email.php" method="post">
+            <form id="contact-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
 
@@ -52,6 +52,7 @@
 
                 <button type="submit">Send Message</button>
             </form>
+            <p id="status-message"></p>
         </div>
         <br>
         <h3>Connect with Me</h3>
@@ -66,6 +67,30 @@
         <p>&copy; 2025 Rahul Dabgotra</p>
     </footer>
 
+    <script>
+        (function () {
+            emailjs.init("2SZtUDoBrIloBgDsA");
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.send("service_xc8h1jm", "2SZtUDoBrIloBgDsA", {
+                from_name: document.getElementById("name").value,
+                from_email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            }).then(
+                function (response) {
+                    document.getElementById("status-message").innerText = "Message sent successfully!";
+                },
+                function (error) {
+                    document.getElementById("status-message").innerText = "Error sending message.";
+                }
+            );
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
