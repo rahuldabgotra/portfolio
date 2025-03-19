@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+:root {
+    --bg-light: #f1f6fa;
+    --text-light: #1d2f3b;
+    --bg-dark: #121a24;
+    --text-dark: #d0d8e0;
+    --glass-light: rgba(200, 225, 255, 0.3);
+    --glass-dark: rgba(0, 10, 20, 0.8);
+    --accent-color: #5AF;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Header & Navbar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px 0px 20px;
+    backdrop-filter: blur(10px);
+    background: var(--glass-light);
+    border-radius: 10px;
+    transition: background 0.3s;
+    /* border: 2px solid var(--accent-color); */
+}
+
+.dark-mode header {
+    background: var(--glass-dark);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: grey;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background: var(--glass-dark);
+    color: white;
+    border-radius: 20px;
+}
+
+.dark-mode #theme-toggle {
+    background: var(--glass-light);
+    color: black;
+}
+
+
+main {
+    padding: 20px;
+    /* border: 2px solid var(--accent-color); */
+}
+
+main p {
+    text-align: justify;
+}
+
+.cta-button {
+    display: inline-block;
+    padding-bottom: 30px;
+    color: var(--text-light);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+}
+
+.dark-mode .cta-button {
+    color: var(--text-dark);
+}
+
+.cta-button:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    /* margin-top: 20px; */
+    border-radius: 10px;
+    background: var(--glass-light);
+    transition: background 0.3s;
+    /* border: 2px solid var(--accent-color); */
+}
+
+.dark-mode footer {
+    background: var(--glass-dark);
+}
