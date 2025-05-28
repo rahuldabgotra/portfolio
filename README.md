@@ -8,10 +8,11 @@ Visit the live portfolio at: [rahuldabgotra.github.io/portfolio](https://rahulda
 
 ## 📁 Pages
 
-- **Home (`index.html`)** — Landing page with a brief introduction.
-- **About (`about.html`)** — Information about my background, skills, and experience.
-- **Portfolio (`portfolio.html`)** — A showcase of my projects with descriptions and visuals.
-- **Contact (`contact.html`)** — A form and links for getting in touch.
+- 🔗 [Home](https://rahuldabgotra.github.io/portfolio/index.html) — Landing page with a brief introduction.  
+- 🔗 [About](https://rahuldabgotra.github.io/portfolio/about.html) — Background, skills, and experience.  
+- 🔗 [Portfolio](https://rahuldabgotra.github.io/portfolio/portfolio.html) — Showcase of projects with descriptions and visuals.  
+- 🔗 [Contact](https://rahuldabgotra.github.io/portfolio/contact.html) — Contact form and communication links.  
+
 
 ## 🛠️ Tech Stack
 
